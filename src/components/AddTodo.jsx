@@ -11,12 +11,14 @@ class AddTodo extends React.Component{
     //prevent reload
     e.preventDefault();
     //add todo
-    this.props.addTodo({
-      id: new Date().getTime(),
-      task: this.state.newTodo,
-      completed: false,
-    })
-    this.resetInput();
+    if(this.state.newTodo){
+      this.props.addTodo({
+        id: new Date().getTime(),
+        task: this.state.newTodo,
+        completed: false,
+      })
+      this.resetInput();
+    }
   }
   resetInput = () => {
     this.setState({
