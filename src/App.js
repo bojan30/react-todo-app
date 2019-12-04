@@ -6,7 +6,7 @@ import './App.css'
 
 class App extends React.Component{
   componentDidMount(){
-    window.scrollTo(0,1);
+    window.scrollTo(0,500);
   }
   componentDidUpdate(){
     window.scrollTo(0, 1);
@@ -47,6 +47,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="container">
+        Updated
         <Nav />
         <AddTodo addTodo = {this.addTodo} />
         <Todos toggleCompleteTodo = {this.toggleCompleteTodo} deleteTodo = {this.deleteTodo} todos = {this.state.todos} />
