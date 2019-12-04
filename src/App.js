@@ -6,9 +6,10 @@ import './App.css'
 
 class App extends React.Component{
   componentDidMount(){
-    setTimeout(() => {
-      window.scrollTo(0,1);
-    }, 0)
+    window.scrollTo(0,1);
+  }
+  componentDidUpdate(){
+    window.scrollTo(0, 1);
   }
   state = {
     todos: [
