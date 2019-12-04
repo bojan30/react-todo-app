@@ -5,6 +5,11 @@ import AddTodo from './components/AddTodo'
 import './App.css'
 
 class App extends React.Component{
+  componentDidUpdate(){
+    setTimeout(() => {
+      window.scrollTo(0,1);
+    }, 0)
+  }
   state = {
     todos: [
       
